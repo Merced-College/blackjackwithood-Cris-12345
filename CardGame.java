@@ -1,5 +1,6 @@
-package cardGame;
-
+//package cardGame;
+//Abraham Gonzalez, Anthony Madrigal-Murillo, Cristopher Gomez 
+//1/28/2025
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
@@ -31,13 +32,24 @@ public class CardGame {
 		}
 
 		shuffle();
+		shuffle();
+		shuffle();
+		shuffle();
 
-		//for(Card c: deckOfCards)
-			//System.out.println(c);
+		int k = 0;
+		for(Card c: deckOfCards) {
+			System.out.println(k + " " + c);
+			k++;
+		}
 
 		//deal the player 5 cards
 		for(int i = 0; i < 4; i++) {
-			playerCards.add(deckOfCards.remove(i));
+			playerCards.add(deckOfCards.get(i));
+		}
+
+		//deal the player 5 cards
+		for(int i = 0; i < 4; i++) {
+			deckOfCards.remove(i);
 		}
 		
 		System.out.println("players cards");
