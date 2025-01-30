@@ -25,6 +25,11 @@ public class Card{
         this.picture = picture;
     }
 
+    //Defining Equals
+    public boolean equal(Card other){
+        return rank.equals(other.rank);
+    }
+
     //Setters
     public void setSuit(String suit){
         this.suit = suit;
@@ -57,9 +62,6 @@ public class Card{
 
     public String getPicture(){
         return picture;
-    }
-    public boolean equals(Card other){
-        return rank.equals(other.rank) && value== other.value; 
     }
 
     //toString - Returns all varaibles
